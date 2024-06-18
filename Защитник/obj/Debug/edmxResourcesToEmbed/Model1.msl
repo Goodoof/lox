@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище StrazhnikModelContainer" CdmEntityContainer="StrazhnikEntities">
+    <EntitySetMapping Name="ГруппаПользователя">
+      <EntityTypeMapping TypeName="StrazhnikModel.ГруппаПользователя">
+        <MappingFragment StoreEntitySet="ГруппаПользователя">
+          <ScalarProperty Name="КодГруппы" ColumnName="КодГруппы" />
+          <ScalarProperty Name="НазваниеГруппы" ColumnName="НазваниеГруппы" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Заказ">
+      <EntityTypeMapping TypeName="StrazhnikModel.Заказ">
+        <MappingFragment StoreEntitySet="Заказ">
+          <ScalarProperty Name="КодЗаказа" ColumnName="КодЗаказа" />
+          <ScalarProperty Name="КодПродукции" ColumnName="КодПродукции" />
+          <ScalarProperty Name="Количество" ColumnName="Количество" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="МандатДоступа">
+      <EntityTypeMapping TypeName="StrazhnikModel.МандатДоступа">
+        <MappingFragment StoreEntitySet="МандатДоступа">
+          <ScalarProperty Name="КодМандата" ColumnName="КодМандата" />
+          <ScalarProperty Name="КодПользователя" ColumnName="КодПользователя" />
+          <ScalarProperty Name="КодУровня" ColumnName="КодУровня" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Пользователь">
+      <EntityTypeMapping TypeName="StrazhnikModel.Пользователь">
+        <MappingFragment StoreEntitySet="Пользователь">
+          <ScalarProperty Name="КодПользователя" ColumnName="КодПользователя" />
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+          <ScalarProperty Name="СекретноеСлово" ColumnName="СекретноеСлово" />
+          <ScalarProperty Name="ТипПользователя" ColumnName="ТипПользователя" />
+          <ScalarProperty Name="Одобрен" ColumnName="Одобрен" />
+          <ScalarProperty Name="Фото" ColumnName="Фото" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Пол" ColumnName="Пол" />
+          <ScalarProperty Name="Логин" ColumnName="Логин" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Предприятие">
+      <EntityTypeMapping TypeName="StrazhnikModel.Предприятие">
+        <MappingFragment StoreEntitySet="Предприятие">
+          <ScalarProperty Name="КодПредприятия" ColumnName="КодПредприятия" />
+          <ScalarProperty Name="НазваниеПредприятия" ColumnName="НазваниеПредприятия" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Продукт">
+      <EntityTypeMapping TypeName="StrazhnikModel.Продукт">
+        <MappingFragment StoreEntitySet="Продукт">
+          <ScalarProperty Name="КодПродукции" ColumnName="КодПродукции" />
+          <ScalarProperty Name="НазваниеПродукции" ColumnName="НазваниеПродукции" />
+          <ScalarProperty Name="КодПредприятия" ColumnName="КодПредприятия" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Событие">
+      <EntityTypeMapping TypeName="StrazhnikModel.Событие">
+        <MappingFragment StoreEntitySet="Событие">
+          <ScalarProperty Name="КодСобытия" ColumnName="КодСобытия" />
+          <ScalarProperty Name="КодПользователя" ColumnName="КодПользователя" />
+          <ScalarProperty Name="ТипСобытия" ColumnName="ТипСобытия" />
+          <ScalarProperty Name="ВремяСобытия" ColumnName="ВремяСобытия" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="УровеньДоступа">
+      <EntityTypeMapping TypeName="StrazhnikModel.УровеньДоступа">
+        <MappingFragment StoreEntitySet="УровеньДоступа">
+          <ScalarProperty Name="КодУровня" ColumnName="КодУровня" />
+          <ScalarProperty Name="НазваниеУровня" ColumnName="НазваниеУровня" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

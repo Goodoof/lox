@@ -1,0 +1,86 @@
+﻿<Window x:Class="Защитник.Windows.Verification"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Защитник.Windows"
+        mc:Ignorable="d"
+        Title="Verification" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name ="UserInformationTextBox" HorizontalAlignment="Left" Height="49" TextWrapping="Wrap" VerticalAlignment="Top" Width="792" TextAlignment="Right"/>
+        <TabControl HorizontalAlignment="Left" Height="298" Margin="10,25,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="Верификация" FontFamily="Comic Sans MS">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="646*"/>
+                        <ColumnDefinition Width="111*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="DataGridVerification" 
+                  Grid.Row="0"
+                  FontSize="10"
+                  Grid.ColumnSpan="2"
+                  IsReadOnly ="True"
+                  AutoGenerateColumns="False"
+                  Grid.RowSpan="1" 
+                  RowBackground="LightSteelBlue"
+                  AlternatingRowBackground="GhostWhite"
+                  RowHeight="31"
+                  Cursor="Hand" FontFamily="Comic Sans MS" FontWeight="Bold" BorderBrush="#FF688CAF">
+                        <DataGrid.Background>
+                            <ImageBrush Opacity="0.7"/>
+                        </DataGrid.Background>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="Имя" Binding="{Binding Имя, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="Должность" Binding="{Binding Должность, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="Тип Пользователя" Binding="{Binding ТипПользователя, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                                <DataGridTextColumn.EditingElementStyle>
+                                    <Style TargetType="{x:Type ComboBox}">
+                                        <Setter Property="ItemsSource" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ТипыПользователей}"/>
+                                        <Setter Property="DisplayMemberPath" Value="Название_типа"/>
+                                        <Setter Property="SelectedValuePath" Value="ТипПользователя"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGridTextColumn.EditingElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Логин" Binding="{Binding Логин, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="СекретноеCлово" Binding="{Binding СекретноеCлово, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridCheckBoxColumn Header="Одобрить" Binding="{Binding Одобрить, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Мандаты доступа" FontFamily="Comic Sans MS">
+                <DataGrid x:Name="DataGridMandat"
+                    FontSize="10"
+                    IsReadOnly ="True"
+                    AutoGenerateColumns="False" 
+                    RowBackground="LightSteelBlue"
+                    AlternatingRowBackground="GhostWhite"
+                    RowHeight="31"
+                    Cursor="Hand" FontFamily="Comic Sans MS" FontWeight="Bold" BorderBrush="#FF688CAF">
+                    <DataGrid.Background>
+                        <ImageBrush Opacity="0.7"/>
+                    </DataGrid.Background>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Имя, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridTextColumn Header="Должность" Binding="{Binding Должность, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridCheckBoxColumn Header="Добавление данных" Binding="{Binding КодУровня, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridCheckBoxColumn Header="Просмотр данных" Binding="{Binding КодУровня, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <DataGridCheckBoxColumn Header="Формирование отчётов" Binding="{Binding КодУровня, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" HorizontalAlignment="Left" Height="31" Margin="333,358,0,0" VerticalAlignment="Top" Width="107"/>
+    </Grid>
+</Window>

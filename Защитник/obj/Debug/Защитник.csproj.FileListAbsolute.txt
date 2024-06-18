@@ -1,0 +1,35 @@
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Защитник.csproj.AssemblyReference.cache
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Windows\LoginWindow.baml
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Windows\AccessManagementWindow.xaml.g.cs
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Windows\LoginWindow.g.cs
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Windows\Verification.g.cs
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\App.g.cs
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Защитник_MarkupCompile.cache
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Защитник_MarkupCompile.lref
+C:\Users\sanzharevskijvp\source\repos\Защитник\Защитник\obj\Debug\Защитник_Content.g.cs
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Windows\LoginWindow.baml
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Windows\AccessManagementWindow.xaml.g.cs
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Windows\LoginWindow.g.cs
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Windows\Verification.g.cs
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\App.g.cs
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник_Content.g.cs
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник_MarkupCompile.cache
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник_MarkupCompile.lref
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\Защитник.exe.config
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\Защитник.exe
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\Защитник.pdb
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\EntityFramework.dll
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\EntityFramework.xml
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Windows\AccessManagementWindow.xaml.baml
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Windows\Verification.baml
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.g.resources
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.Properties.Resources.resources
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.csproj.GenerateResource.cache
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.csproj.CoreCompileInputs.cache
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.csproj.CopyComplete
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.exe
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.pdb
+C:\Users\Ghost\Downloads\Экзамен 2\Защитник\Защитник\Защитник\obj\Debug\Защитник.csproj.AssemblyReference.cache

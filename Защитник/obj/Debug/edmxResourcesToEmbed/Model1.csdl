@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StrazhnikModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ГруппаПользователя">
+    <Key>
+      <PropertyRef Name="КодГруппы" />
+    </Key>
+    <Property Name="КодГруппы" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="НазваниеГруппы" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Заказ">
+    <Key>
+      <PropertyRef Name="КодЗаказа" />
+    </Key>
+    <Property Name="КодЗаказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="КодПродукции" Type="Int32" />
+    <Property Name="Количество" Type="Int32" />
+    <NavigationProperty Name="Продукт" Relationship="Self.FK__Заказ__КодПродук__31EC6D26" FromRole="Заказ" ToRole="Продукт" />
+  </EntityType>
+  <EntityType Name="МандатДоступа">
+    <Key>
+      <PropertyRef Name="КодМандата" />
+    </Key>
+    <Property Name="КодМандата" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="КодПользователя" Type="Int32" />
+    <Property Name="КодУровня" Type="Int32" />
+    <NavigationProperty Name="УровеньДоступа" Relationship="Self.FK__МандатДос__КодУр__33D4B598" FromRole="МандатДоступа" ToRole="УровеньДоступа" />
+    <NavigationProperty Name="Пользователь" Relationship="Self.FK__МандатыДо__КодПо__0CBAE877" FromRole="МандатДоступа" ToRole="Пользователь" />
+  </EntityType>
+  <EntityType Name="Пользователь">
+    <Key>
+      <PropertyRef Name="КодПользователя" />
+    </Key>
+    <Property Name="КодПользователя" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Должность" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Пароль" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="СекретноеСлово" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ТипПользователя" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Одобрен" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Фото" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Фамилия" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Имя" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Отчество" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Пол" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Логин" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="МандатДоступа" Relationship="Self.FK__МандатыДо__КодПо__0CBAE877" FromRole="Пользователь" ToRole="МандатДоступа" />
+    <NavigationProperty Name="Событие" Relationship="Self.FK__События__КодПоль__1FCDBCEB" FromRole="Пользователь" ToRole="Событие" />
+  </EntityType>
+  <EntityType Name="Предприятие">
+    <Key>
+      <PropertyRef Name="КодПредприятия" />
+    </Key>
+    <Property Name="КодПредприятия" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="НазваниеПредприятия" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Продукт" Relationship="Self.FK__Продукт__КодПред__34C8D9D1" FromRole="Предприятие" ToRole="Продукт" />
+  </EntityType>
+  <EntityType Name="Продукт">
+    <Key>
+      <PropertyRef Name="КодПродукции" />
+    </Key>
+    <Property Name="КодПродукции" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="НазваниеПродукции" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="КодПредприятия" Type="Int32" />
+    <NavigationProperty Name="Заказ" Relationship="Self.FK__Заказ__КодПродук__31EC6D26" FromRole="Продукт" ToRole="Заказ" />
+    <NavigationProperty Name="Предприятие" Relationship="Self.FK__Продукт__КодПред__34C8D9D1" FromRole="Продукт" ToRole="Предприятие" />
+  </EntityType>
+  <EntityType Name="Событие">
+    <Key>
+      <PropertyRef Name="КодСобытия" />
+    </Key>
+    <Property Name="КодСобытия" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="КодПользователя" Type="Int32" />
+    <Property Name="ТипСобытия" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ВремяСобытия" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Пользователь" Relationship="Self.FK__События__КодПоль__1FCDBCEB" FromRole="Событие" ToRole="Пользователь" />
+  </EntityType>
+  <EntityType Name="УровеньДоступа">
+    <Key>
+      <PropertyRef Name="КодУровня" />
+    </Key>
+    <Property Name="КодУровня" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="НазваниеУровня" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="МандатДоступа" Relationship="Self.FK__МандатДос__КодУр__33D4B598" FromRole="УровеньДоступа" ToRole="МандатДоступа" />
+  </EntityType>
+  <Association Name="FK__Заказ__КодПродук__31EC6D26">
+    <End Role="Продукт" Type="Self.Продукт" Multiplicity="0..1" />
+    <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Продукт">
+        <PropertyRef Name="КодПродукции" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="КодПродукции" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__МандатДос__КодУр__33D4B598">
+    <End Role="УровеньДоступа" Type="Self.УровеньДоступа" Multiplicity="0..1" />
+    <End Role="МандатДоступа" Type="Self.МандатДоступа" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="УровеньДоступа">
+        <PropertyRef Name="КодУровня" />
+      </Principal>
+      <Dependent Role="МандатДоступа">
+        <PropertyRef Name="КодУровня" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__МандатыДо__КодПо__0CBAE877">
+    <End Role="Пользователь" Type="Self.Пользователь" Multiplicity="0..1" />
+    <End Role="МандатДоступа" Type="Self.МандатДоступа" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Пользователь">
+        <PropertyRef Name="КодПользователя" />
+      </Principal>
+      <Dependent Role="МандатДоступа">
+        <PropertyRef Name="КодПользователя" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__События__КодПоль__1FCDBCEB">
+    <End Role="Пользователь" Type="Self.Пользователь" Multiplicity="0..1" />
+    <End Role="Событие" Type="Self.Событие" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Пользователь">
+        <PropertyRef Name="КодПользователя" />
+      </Principal>
+      <Dependent Role="Событие">
+        <PropertyRef Name="КодПользователя" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Продукт__КодПред__34C8D9D1">
+    <End Role="Предприятие" Type="Self.Предприятие" Multiplicity="0..1" />
+    <End Role="Продукт" Type="Self.Продукт" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Предприятие">
+        <PropertyRef Name="КодПредприятия" />
+      </Principal>
+      <Dependent Role="Продукт">
+        <PropertyRef Name="КодПредприятия" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StrazhnikEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ГруппаПользователя" EntityType="Self.ГруппаПользователя" />
+    <EntitySet Name="Заказ" EntityType="Self.Заказ" />
+    <EntitySet Name="МандатДоступа" EntityType="Self.МандатДоступа" />
+    <EntitySet Name="Пользователь" EntityType="Self.Пользователь" />
+    <EntitySet Name="Предприятие" EntityType="Self.Предприятие" />
+    <EntitySet Name="Продукт" EntityType="Self.Продукт" />
+    <EntitySet Name="Событие" EntityType="Self.Событие" />
+    <EntitySet Name="УровеньДоступа" EntityType="Self.УровеньДоступа" />
+    <AssociationSet Name="FK__Заказ__КодПродук__31EC6D26" Association="Self.FK__Заказ__КодПродук__31EC6D26">
+      <End Role="Продукт" EntitySet="Продукт" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK__МандатДос__КодУр__33D4B598" Association="Self.FK__МандатДос__КодУр__33D4B598">
+      <End Role="УровеньДоступа" EntitySet="УровеньДоступа" />
+      <End Role="МандатДоступа" EntitySet="МандатДоступа" />
+    </AssociationSet>
+    <AssociationSet Name="FK__МандатыДо__КодПо__0CBAE877" Association="Self.FK__МандатыДо__КодПо__0CBAE877">
+      <End Role="Пользователь" EntitySet="Пользователь" />
+      <End Role="МандатДоступа" EntitySet="МандатДоступа" />
+    </AssociationSet>
+    <AssociationSet Name="FK__События__КодПоль__1FCDBCEB" Association="Self.FK__События__КодПоль__1FCDBCEB">
+      <End Role="Пользователь" EntitySet="Пользователь" />
+      <End Role="Событие" EntitySet="Событие" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Продукт__КодПред__34C8D9D1" Association="Self.FK__Продукт__КодПред__34C8D9D1">
+      <End Role="Предприятие" EntitySet="Предприятие" />
+      <End Role="Продукт" EntitySet="Продукт" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

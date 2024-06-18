@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bbd7a2e1f129451a9939b3e0e522492a" Name="Diagram1">
+        <EntityTypeShape EntityType="StrazhnikModel.ГруппаПользователя" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.Заказ" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.МандатДоступа" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.Пользователь" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.Предприятие" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.Продукт" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.Событие" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrazhnikModel.УровеньДоступа" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <AssociationConnector Association="StrazhnikModel.FK__Заказ__КодПродук__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="StrazhnikModel.FK__МандатДос__КодУр__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="StrazhnikModel.FK__МандатыДо__КодПо__0CBAE877" ManuallyRouted="false" />
+        <AssociationConnector Association="StrazhnikModel.FK__События__КодПоль__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="StrazhnikModel.FK__Продукт__КодПред__34C8D9D1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
